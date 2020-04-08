@@ -1,0 +1,16 @@
+/*
+ * FUP que solicite um número para o usuário e através deste número, imprima a sua tabuada.
+ */
+
+public class Tabuada{
+ 
+  public static void main(String[] args){
+    
+    int tabuada = Entrada.leiaInt("Informe um número para a tabuada");
+    for(int x = 0; x <= 10; x++){
+      System.out.println(x + " x " + tabuada + " = " + + x * tabuada );
+    }
+    
+  }
+
+}
