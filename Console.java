@@ -1,11 +1,15 @@
 public class Console{
-  
+
   public static void main(String[] args){
-    if(args.length > 0){
-      System.out.println(args[0]); 
+    
+    if(args.length == 1){
+      System.out.println("1 argumento foi identificado");
+    }else if(args.length > 1){
+      System.out.println("Foram identificados " + args.length + " argumentos");
     }else{
-      System.out.println("Nenhum comando foi passado");
+      System.out.println("Não foram passados argumentos");
     }
+  
   }
 
 }
