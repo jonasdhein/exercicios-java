@@ -13,9 +13,9 @@ public class CalculaDesconto{
     
     //Opção 2
     boolean nivel_cliente = Entrada.leiaBoolean("Você é um cliente especial?");
-    if(nivel_cliente){
+    if(nivel_cliente){ //mesma coisa que (nivel_cliente == true)
       nivel_cliente = Entrada.leiaBoolean("Você é um fucionário?");
-      if(nivel_cliente){
+      if(nivel_cliente){ //mesma coisa que (nivel_cliente == true)
         codigo_cliente = 2;
       }else{
         codigo_cliente = 3;
