@@ -6,7 +6,7 @@ public class MegaSena{
     //  System.out.println(Math.random());//Math.random gera números de 0 até 0.99
     //}
     for(int i = 0; i < 6; i++){
-      System.out.println((int) (Math.random() * 60) + 1);
+      System.out.print((int) (Math.random() * 60) + 1 + " - ");
     }
     
     
