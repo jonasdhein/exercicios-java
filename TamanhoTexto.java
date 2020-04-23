@@ -3,7 +3,6 @@
  */
 public class TamanhoTexto {
   
-  
   public static void main(String[] args) { 
    
     String texto = new String("  Algoritmos e Programação     ");

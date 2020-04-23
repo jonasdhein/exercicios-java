@@ -7,8 +7,10 @@ public class Tabuada{
   public static void main(String[] args){
     
     int tabuada = Entrada.leiaInt("Informe um número para a tabuada");
+    int resultado = 0;
     for(int x = 0; x <= 10; x++){
-      System.out.println(x + " x " + tabuada + " = " + + x * tabuada );
+      resultado = x * tabuada;
+      System.out.println(x + " x " + tabuada + " = " + resultado);
     }
     
   }

@@ -6,7 +6,7 @@ public class Arredondamento{
     System.out.println(valor); //resultado puro
     System.out.println(Math.round(valor)); //int mais próximo
     System.out.println((double) Math.round(valor * 100) / 100); //arredondando valor opção 1
-    System.out.println(Math.floor(valor * 100) / 100); //arredondando valor opção 2
+    System.out.println("floor = " + Math.floor(51 / 2)); //arredondando valor opção 2
     
   }
 }
