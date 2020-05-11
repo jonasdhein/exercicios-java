@@ -1,6 +1,6 @@
 /*
  * FUP que consiga ordenar um vetor de inteiros em ordem crescente de valor
- * Bubble sort (ordenação por flutuação)
+ * Bubble sort (ordenacao por flutuacao)
  */
 public class OrdenarVetor{
 
@@ -22,11 +22,10 @@ public class OrdenarVetor{
     }
     
     for(int i = 0; i < numeros.length; i++){
-      System.out.println(numeros[i]);
+      System.out.print(numeros[i] + ",");
     }
-    System.out.println(Funcoes.obterHoraAtual());
     
-    System.out.println("Fim do programa");
+    System.out.println("\nFim do programa");
     
   }
 
