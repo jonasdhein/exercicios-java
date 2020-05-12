@@ -9,7 +9,6 @@ public class OrdenarVetor{
     int[] numeros = {4,3,5,1,2};
     int tam = numeros.length;
     
-    System.out.println(Funcoes.obterHoraAtual());
     int temp = 0;
     for(int i = 0; i < tam - 1; i++){
       for(int x = 0; x < tam - i - 1; x++){
