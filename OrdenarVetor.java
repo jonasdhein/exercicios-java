@@ -6,8 +6,8 @@ public class OrdenarVetor{
 
   public static void main(String[] args){
    
-    int[] numeros = {4,3,5,1,2};
-    int tam = numeros.length;
+    int[] numeros = {4,3,5,1,2}; //
+    int tam = numeros.length; //armazenando o tamanho do vetor
     
     int temp = 0;
     for(int i = 0; i < tam - 1; i++){

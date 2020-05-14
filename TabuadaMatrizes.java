@@ -6,8 +6,8 @@ public class TabuadaMatrizes{
   
   public static void main(String[] args){
   
-    int[] tabuada = {2,5};
-    int[][] matriz = new int[2][10];
+    int[] tabuada = {2,5,8};
+    int[][] matriz = new int[3][10];
     
     //preencher a matriz com as tabuadas do vetor tabuada[]
     for(int x = 0; x < matriz.length; x++){
