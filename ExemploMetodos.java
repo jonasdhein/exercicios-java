@@ -13,6 +13,7 @@ public class ExemploMetodos{
     
   }
   
+  //void = método sem retorno definido
   public static void mostraTexto(){
      System.out.println("Método mostraTexto()"); 
   }
