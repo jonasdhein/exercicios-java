@@ -1,0 +1,25 @@
+/*
+ * FUP que solicite 3 números para o usuário, armazenando-os em um vetor de 3 posições.
+ * Em seguida, imprima a tabuada de cada número informado.
+ */
+
+public class TabuadaVetor{
+ 
+  public static void main(String[] args){
+    
+    int[] tabuada = new int[3];
+    for(int i = 0; i < tabuada.length; i++){
+      tabuada[i] = Entrada.leiaInt("Informe um número qualquer");
+    }
+    
+    int resultado = 0;
+    for(int i = 0; i < tabuada.length; i++){
+      
+      //System.out.println("tabuada["+ i +"] = " + tabuada[i]);
+      for(int x = 1; x <= 10; x++){
+         System.out.println(tabuada[i] * x);
+      }
+      
+    }
+  }
+}

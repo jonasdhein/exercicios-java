@@ -1,0 +1,13 @@
+/*
+FUP que solicite ao usuário um dia da semana (1 a 7 apenas) e com base nisso, imprima o dia da semana 
+(sendo que o 1 representa o domingo)
+*/
+public class DiaDaSemana{
+
+  public static void main(String[] args){
+  
+    String dia_semana = Entrada.LeiaString("Informe um dia da semana (1,2,3,4,5,6 ou 7):");
+    
+  }
+
+}

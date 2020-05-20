@@ -1,0 +1,12 @@
+/*
+ * FUP que dado um vetor: vetor[] = {1,2,3,4,5}, reordene os valores dentro do vetor, 
+ * imprimindo no final os valores de trás para frente
+ */ 
+public class ReordenarVetor{
+
+  public static void main(String[] args){
+    
+    
+  }
+
+}
