@@ -1,0 +1,9 @@
+public ValidaVetor{
+ 
+  public void static main(String[] args){
+   
+    int[i] vetor = {1,2,3};
+    
+  }
+  
+}
