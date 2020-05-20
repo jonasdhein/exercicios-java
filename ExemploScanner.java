@@ -1,13 +1,11 @@
-
 public class ExemploScanner {
+
   public static void main (String args[]) {
     
-    String nome;
+    double altura = EntradaScanner.leiaDouble("Qual a sua altura?");
     
-    System.out.print("Qual seu nome?");
-    nome = EntradaScanner.leiaString();
-    
-    System.out.println(nome);
+    System.out.println(altura);
     
   }
+  
 }
