@@ -13,15 +13,33 @@ public class EntradaScanner{
   }
   
   public static int leiaInt(String texto){
-    System.out.print(texto);
+     int retorno = 0;
+     System.out.print(texto);
      Scanner leia = new Scanner(System.in);
-     return leia.nextInt();
+     
+     try{
+       
+       retorno = leia.nextInt();
+       
+     }catch(Exception ex){
+       leiaInt(texto); //recursividade
+     }
+     
+     return retorno;
   }
   
   public static Double leiaDouble(String texto){
-    System.out.print(texto);
+     double retorno = 0;
+     System.out.print(texto);
      Scanner leia = new Scanner(System.in);
-     return leia.nextDouble();
+     
+     try{
+       retorno = leia.nextDouble();
+     }catch(Exception ex){
+       leiaDouble(texto); //recursividade
+     }
+     
+     return retorno;
   }
   
 }
