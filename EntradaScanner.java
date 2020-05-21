@@ -22,7 +22,7 @@ public class EntradaScanner{
        retorno = leia.nextInt();
        
      }catch(Exception ex){
-       leiaInt(texto); //recursividade
+       leiaInt("Erro\n" + texto); //recursividade
      }
      
      return retorno;
@@ -36,7 +36,7 @@ public class EntradaScanner{
      try{
        retorno = leia.nextDouble();
      }catch(Exception ex){
-       leiaDouble(texto); //recursividade
+       leiaDouble("Erro\n" + texto); //recursividade
      }
      
      return retorno;
