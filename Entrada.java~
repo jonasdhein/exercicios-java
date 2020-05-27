@@ -39,6 +39,10 @@ public class Entrada {
     public static String leiaString() {
         return leiaString("","");
     }
+    
+    public static void mostraTexto(String titulo, String descricao){
+      JOptionPane.showMessageDialog(null, descricao, titulo, JOptionPane.INFORMATION_MESSAGE);
+    }
 
     /**
      ** String input from the user via a simple dialog.

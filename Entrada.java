@@ -20,7 +20,8 @@ public class Entrada {
     static final String STRING_TITLE = "Entre com uma string";
     static final String CHAR_TITLE = "Entre com um char";
     static final String INT_TITLE = "Entre com um int";
-    static final String BOOLEAN_TITLE = "Selecione true ou false";
+    static final String BOOLEAN_TITLE = "Selecione verdadeiro ou falso";
+    static final String OPTION_TITLE = "Selecione uma opção";
     static final String DOUBLE_TITLE = "Entre com um double";
     static final String TRUE = "true";
     static final String FALSE = "false";
@@ -218,7 +219,7 @@ public class Entrada {
             Object[] options = {trueText, falseText};
             result = JOptionPane.showOptionDialog(null,
                                                   commentArray,
-                                                  BOOLEAN_TITLE,
+                                                  "Escolha uma opção",
                                                   JOptionPane.YES_NO_OPTION,
                                                   JOptionPane.QUESTION_MESSAGE,
                                                   null, //don't use a custom Icon
@@ -234,6 +235,41 @@ public class Entrada {
             }
         }
         return (result == 0);
+    }
+    
+    public static int leiaOpcao(String prompt, String option1, String option2, String option3) {
+        Object[] commentArray = {prompt, EMPTY_STRING};
+        boolean validResponse = false;
+        int result = -1;
+
+        int response = 0;
+        while (!validResponse) {
+            Object[] options = {option3, option2, option1};
+            result = JOptionPane.showOptionDialog(null,
+                                                  commentArray,
+                                                  OPTION_TITLE,
+                                                  JOptionPane.YES_NO_CANCEL_OPTION,
+                                                  JOptionPane.QUESTION_MESSAGE,
+                                                  null, //don't use a custom Icon
+                                                  options, //the titles of buttons
+                                                  "OPÇÃO"); //the title of the default button, EA: CORRECTED from TRUE
+
+            // check true or false buttons pressed
+            if (result == JOptionPane.YES_OPTION)
+            {
+                validResponse = true;
+                response = 3;
+            }else if(result == JOptionPane.NO_OPTION){
+              validResponse = true;
+                response = 2;
+            }else if(result == JOptionPane.CANCEL_OPTION){
+              validResponse = true;
+                response = 1;
+            } else {
+                commentArray[1] = "Seleção incorreta: escolha uma opção da tela";
+            }
+        }
+        return response;
     }
 
     /**

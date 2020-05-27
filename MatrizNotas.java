@@ -1,3 +1,8 @@
+/*
+ * Em uma classe há 4 alunos, cada um realizou três provas. 
+ * Após solicitar os nomes dos alunos e as notas, imprimir todas as informações
+ * OBS: Não precisa imprimir a média
+*/
 public class MatrizNotas{
  
   public static void main(String[] args){
@@ -13,7 +18,6 @@ public class MatrizNotas{
       }
       
     }
-    
-    
+   
   }
 }

@@ -12,7 +12,6 @@ public class Labirinto_v2{
     int vida = 100; //vida do nosso personagem
     int dado = 0; //exemplo de utilização de um dado 20 lados (0 a 19)
     int dificuldade = -1;
-    String[] inimigos
     
     Entrada.mostraTexto("JOGO DO LABIRINTO", "Seja bem-vindo ao labirinto do caos. Escolha o lado errado e você se ****");
     
@@ -58,7 +57,7 @@ public class Labirinto_v2{
     
   }
   
-  private void imprimePersonagem(){
+  private static void imprimePersonagem(){
      
   }
   
