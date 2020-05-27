@@ -26,6 +26,7 @@ public class MatrizFrutas{
     double menor_valor = 0;
     double maior_valor = 0;
     
+    //Laço para percorrer a matriz
     for(int i = 0; i < frutas.length; i++){
       System.out.println(frutas[i][0] + ": R$ " + frutas[i][1]);
       
@@ -43,6 +44,15 @@ public class MatrizFrutas{
     
     System.out.println("Menor valor: " + menor + " a R$ " + menor_valor);
     System.out.println("Maior valor: " + maior + " a R$ " + maior_valor);
+    
+    //IMPRIMIR A MATRIZ
+    System.out.println("----PREÇOS----");
+    for(int x = 0; x < frutas.length; x++){
+      for(int y = 0; y < frutas[x].length; y++){
+        System.out.print(frutas[x][y] + "\t\t");
+      }
+      System.out.println("");
+    }
     
   }
 }
