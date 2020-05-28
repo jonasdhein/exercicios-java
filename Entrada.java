@@ -242,21 +242,60 @@ public class Entrada {
         boolean validResponse = false;
         int result = -1;
 
-        int response = 0;
         while (!validResponse) {
             Object[] options = {option3, option2, option1};
             result = JOptionPane.showOptionDialog(null,
                                                   commentArray,
                                                   OPTION_TITLE,
-                                                  JOptionPane.YES_NO_CANCEL_OPTION,
+                                                  JOptionPane.DEFAULT_OPTION,
                                                   JOptionPane.QUESTION_MESSAGE,
                                                   null, //don't use a custom Icon
                                                   options, //the titles of buttons
                                                   "OPÇÃO"); //the title of the default button, EA: CORRECTED from TRUE
 
+            validResponse = true;
+            if(result == 0){
+              return 3;
+            }else if(result == 1){
+              return 2;
+            }else if(result == 2){
+              return 1;
+            }
+        }
+        return -1;
+    }
+    
+    public static int leiaOpcao(String prompt, String option1, String option2, String option3, String option4) {
+        Object[] commentArray = {prompt, EMPTY_STRING};
+        boolean validResponse = false;
+        int result = -1;
+
+        while (!validResponse) {
+            Object[] options = {option4, option3, option2, option1};
+            result = JOptionPane.showOptionDialog(null,
+                                                  commentArray,
+                                                  OPTION_TITLE,
+                                                  JOptionPane.DEFAULT_OPTION,
+                                                  JOptionPane.QUESTION_MESSAGE,
+                                                  null, //don't use a custom Icon
+                                                  options, //the titles of buttons
+                                                  "OPÇÃO"); //the title of the default button, EA: CORRECTED from TRUE
+
+            validResponse = true;
+            validResponse = true;
+            if(result == 0){
+              return 4;
+            }else if(result == 1){
+              return 3;
+            }else if(result == 2){
+              return 2;
+            }else if(result == 3){
+              return 1;
+            }
+            //response = result.getValue();
+            /*System.out.println(result);
             // check true or false buttons pressed
-            if (result == JOptionPane.YES_OPTION)
-            {
+            if (result == JOptionPane.YES_OPTION){
                 validResponse = true;
                 response = 3;
             }else if(result == JOptionPane.NO_OPTION){
@@ -267,9 +306,9 @@ public class Entrada {
                 response = 1;
             } else {
                 commentArray[1] = "Seleção incorreta: escolha uma opção da tela";
-            }
+            }*/
         }
-        return response;
+        return -1;
     }
 
     /**
@@ -413,7 +452,7 @@ public class Entrada {
 
             Object input = optionPane.getInputValue();
             if (input == JOptionPane.UNINITIALIZED_VALUE) {
-                commentArray[1] = "Precisa entrar com um valor fracion�rio"; // EA: explanatory text added
+                commentArray[1] = "Precisa entrar com um valor fracionário"; // EA: explanatory text added
                 commentArray[2] = EMPTY_STRING;
             } else {
                 String result = (String) input;

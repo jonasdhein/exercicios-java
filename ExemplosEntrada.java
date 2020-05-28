@@ -9,19 +9,14 @@ public class ExemplosEntrada{
     System.out.println(teste);
       
     for(int i = 0; i < 5; i++){
-      retorno = Entrada.leiaOpcao("Escolha uma opção", "Frente", "Direita", "Esquerda");
+      //leiaOpcao retorna um INT (1,2,3 ou 1,2,3,4)
       
-      if(retorno == 2){
-        System.out.println("Que azar, achou um inimigo no caminho");
+      retorno = Entrada.leiaOpcao("Escolha uma opção", "Opção 1", "Opção 2", "Opção 3");
+      System.out.println(retorno);
       
-        atacar = Entrada.leiaBoolean("Desja atacar ou evitar o inimigo?", "Atacar", "Desviar");
-        if(atacar == true){
-           System.out.println("Você escolheu atacar o inimigo");
-        }else{
-           System.out.println("Você escolheu desistir");
-        }
-        
-      }
+      retorno = Entrada.leiaOpcao("Escolha uma opção", "Opção 1", "Opção 2", "Opção 3", "Opção 4");
+      System.out.println(retorno);
+      
     }
     
   }

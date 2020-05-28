@@ -7,9 +7,25 @@
  * author: Jonas A. Dhein
  */
 public class Labirinto_v2{
+  
   public static void main(String[] args){
     
-    int vida = 100; //vida do nosso personagem
+    int vida = 0; //vida do nosso personagem
+    int ataque = 0; //ataque do nosso personagem
+    String nome = Entrada.leiaString("Informe o seu nome"); //nome do nosso personagem
+    
+    int classe = Entrada.leiaOpcao("Escolha uma classe", "Guerreiro", "Mago", "Cartman");
+    if(classe == 1){
+      vida = 80;
+      ataque = 10;
+    }else if(classe == 2){
+      vida = 60;
+      ataque = 20;
+    }else if(classe == 3){
+      vida = 200;
+      ataque = 2;
+    }
+    
     int dado = 0; //exemplo de utilização de um dado 20 lados (0 a 19)
     int dificuldade = -1;
     
@@ -43,7 +59,8 @@ public class Labirinto_v2{
           vida = 100;//volta para 100 neste caso
         }
       };
-      imprimePersonagem();
+      
+      imprimePersonagem(nome, vida, classe, ataque);
       
       if(vida == 0){
         System.out.println("GAME OVER. VOCÊ CONSEGUIU ANDAR " + (i+1) + " PASSOS!!!");
@@ -57,8 +74,15 @@ public class Labirinto_v2{
     
   }
   
-  private static void imprimePersonagem(){
+  private static void imprimePersonagem(String nome, int vida, int classe, int ataque){
+     System.out.println("-------------");
+     System.out.println(nome);
+     if(classe == 1){
+       System.out.println("Classe:\tGuerreiro");
+     }
      
+     System.out.println("Vida:\t" + vida);
+     System.out.println("Ataque:\t" + ataque);
   }
   
   
