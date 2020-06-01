@@ -1,5 +1,5 @@
 /*
- *Nesta atividade você deverá criar uma espécie de jogo em formato de labirinto, ou seja, 
+ *Nesta atividade voc� dever� criar uma esp�cie de jogo em formato de labirinto, ou seja, 
  * com base em perguntas e respostas, o usuário será levado a um caminho onde encontrará 
  * monstros que o atacarão caso ele decida ir para o caminho errado. 
  * O jogo se baseia em probabilidade apenas. Finalizar o labirinto é o desafio aqui.
@@ -17,21 +17,24 @@ public class Labirinto_v2{
     String nome = EntradaScanner.leiaString("Informe o seu nome"); //nome do nosso personagem
     
     for(int i = 0; i < 5; i++){
-      int d1 = jogarDado(10);
-      if(d1 == 1 || d1 == 2){//20% de chance neste exemplo
-        System.out.println("Dano crítico!"); 
-      }
+      boolean sexo = Entrada.leiaBoolean("Escolha o sexo", "Masc", "Feminino"); 
+      System.out.println(sexo); 
+    }
+    
+    for(int i = 0; i < 5; i++){
+      int valor = Entrada.leiaOpcao("Informe", "1", "2", "3"); 
+      System.out.println(valor); 
     }
     
     int[] vetor = {1,2,3};
     for(int i = 0; i < vetor.length; i++){
-      System.out.println("Vetor na posição " + i + " = " + vetor[i]); 
+      System.out.println("Vetor na posi��o " + i + " = " + vetor[i]); 
     }
     
     System.out.println("Alterando o vetor...");
     vetor = mudarVetor();
     for(int i = 0; i < vetor.length; i++){
-      System.out.println("Vetor na posição " + i + " = " + vetor[i]); 
+      System.out.println("Vetor na posi��o " + i + " = " + vetor[i]); 
     }
     
     vida = vetor[0];
@@ -125,9 +128,9 @@ public class Labirinto_v2{
   private static void enfrentarInimigo(){
     System.out.println("Começou o confronto");
     if(jogarDado(10) < 4){
-      vida-= 20;
+      //vida-= 20;
     }else{
-      vida-= 10; 
+      //vida-= 10; 
     }
     
   }
