@@ -10,23 +10,40 @@ public class Labirinto_v2{
   
   public static void main(String[] args){
     
-    int vida = 0; //vida do nosso personagem
-    int ataque = 0; //ataque do nosso personagem
-    String nome = Entrada.leiaString("Informe o seu nome"); //nome do nosso personagem
+    int vida = 100;
+    int ataque = 20;
+    int classe = 1;
     
-    int classe = 0;
-    for(int i = 0; i < 5; i++){
-       boolean sexo = Entrada.leiaBoolean("Escolha o sexo do personagem", "Feminimo", "Masculino");//Feminino = TRUE, Masculino = FALSE
-       if(sexo == false){
-         System.out.println("Sexo Feminino");
-       }else{
-         System.out.println("Sexo Masculino");
-       }
-    }
+    String nome = EntradaScanner.leiaString("Informe o seu nome"); //nome do nosso personagem
     
     for(int i = 0; i < 5; i++){
       int d1 = jogarDado(10);
+      if(d1 == 1 || d1 == 2){//20% de chance neste exemplo
+        System.out.println("Dano crítico!"); 
+      }
     }
+    
+    int[] vetor = {1,2,3};
+    for(int i = 0; i < vetor.length; i++){
+      System.out.println("Vetor na posição " + i + " = " + vetor[i]); 
+    }
+    
+    System.out.println("Alterando o vetor...");
+    vetor = mudarVetor();
+    for(int i = 0; i < vetor.length; i++){
+      System.out.println("Vetor na posição " + i + " = " + vetor[i]); 
+    }
+    
+    vida = vetor[0];
+    ataque = vetor[1];
+    imprimePersonagem(nome, vida, classe, ataque);
+    
+    Entrada.mostraTexto("JOGO DO LABIRINTO", "");
+    enfrentarInimigo();
+    
+    imprimePersonagem(nome, vida, classe, ataque);
+    
+    Entrada.mostraTexto("JOGO DO LABIRINTO", "");
     
     if(classe == 1){
       vida = 80;
@@ -87,11 +104,31 @@ public class Labirinto_v2{
     
   }
   
+  private static int[] mudarVetor(){
+    int v1 = jogarDado(6);
+    int v2 = jogarDado(50);
+    int v3 = jogarDado(100);
+    
+    int[] vet = {v1, v2, v3};
+    
+    return vet;
+  }
+  
   private static int jogarDado(int tamanho){
     
     int dado = (int) (Math.random() * tamanho) + 1;
     System.out.println("Jogou o dado: " + dado);
     return dado;
+    
+  }
+  
+  private static void enfrentarInimigo(){
+    System.out.println("Começou o confronto");
+    if(jogarDado(10) < 4){
+      vida-= 20;
+    }else{
+      vida-= 10; 
+    }
     
   }
   
