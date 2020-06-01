@@ -13,8 +13,12 @@ public class Labirinto_v2{
     int vida = 100;
     int ataque = 20;
     int classe = 1;
+    int cont_inimigo = 0;
     
     String nome = EntradaScanner.leiaString("Informe o seu nome"); //nome do nosso personagem
+    String[] inimigos = {"Inimigo 1", "Inimigo 2", "Inimigo 3"};
+    int[][] dados_inimigos = new int[][];
+    
     
     for(int i = 0; i < 5; i++){
       int d1 = jogarDado(10);
@@ -32,6 +36,16 @@ public class Labirinto_v2{
     vetor = mudarVetor();
     for(int i = 0; i < vetor.length; i++){
       System.out.println("Vetor na posição " + i + " = " + vetor[i]); 
+    }
+    
+    boolean voltou_vivo = enfrentarInimigo(inimigos[cont_inimigo], dados_inimigos[cont_inimigo][1]); //cont_inimigo = 0
+    if(voltou_vivo){
+      cont_inimigo += 1;
+    }
+    
+    boolean voltou_vivo = enfrentarInimigo(inimigos[cont_inimigo]); //cont_inimigo = 1
+    if(voltou_vivo){
+      cont_inimigo += 1;
     }
     
     vida = vetor[0];
@@ -104,6 +118,17 @@ public class Labirinto_v2{
     
   }
   
+  private static void imprimePersonagem(String nome, int vida, int classe, int ataque){
+     System.out.println("-------------");
+     System.out.println(nome);
+     if(classe == 1){
+       System.out.println("Classe:\tGuerreiro");
+     }
+     
+     System.out.println("Vida:\t" + vida);
+     System.out.println("Ataque:\t" + ataque);
+  }
+  
   private static int[] mudarVetor(){
     int v1 = jogarDado(6);
     int v2 = jogarDado(50);
@@ -132,16 +157,7 @@ public class Labirinto_v2{
     
   }
   
-  private static void imprimePersonagem(String nome, int vida, int classe, int ataque){
-     System.out.println("-------------");
-     System.out.println(nome);
-     if(classe == 1){
-       System.out.println("Classe:\tGuerreiro");
-     }
-     
-     System.out.println("Vida:\t" + vida);
-     System.out.println("Ataque:\t" + ataque);
-  }
+ 
   
   
 }
