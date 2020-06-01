@@ -16,8 +16,12 @@ public class Labirinto_v2{
     
     int classe = 0;
     for(int i = 0; i < 5; i++){
-       classe = Entrada.leiaOpcao("Escolha uma classe", "Classe 1", "Classe 2", "Classe 3", "Classe 4");
-       System.out.println("Classe: " + classe);
+       boolean sexo = Entrada.leiaBoolean("Escolha o sexo do personagem", "Feminimo", "Masculino");//Feminino = TRUE, Masculino = FALSE
+       if(sexo == false){
+         System.out.println("Sexo Feminino");
+       }else{
+         System.out.println("Sexo Masculino");
+       }
     }
     
     for(int i = 0; i < 5; i++){

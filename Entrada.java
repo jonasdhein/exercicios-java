@@ -175,7 +175,7 @@ public class Entrada {
                         commentArray[2] = "Entre com apenas um caracter";
                     }
                 } else {
-                    commentArray[1] = "Entrada inv�lida"; // EA: corrected, no point to print null-object. Question: when it is possible to have null objects?
+                    commentArray[1] = "Entrada inválida"; // EA: corrected, no point to print null-object. Question: when it is possible to have null objects?
                     commentArray[2] = "Entre com apenas um caracter";
                 }
             } else {
@@ -216,7 +216,7 @@ public class Entrada {
         int result = -1;
 
         while (!validResponse) {
-            Object[] options = {trueText, falseText};
+            Object[] options = {falseText, trueText};
             result = JOptionPane.showOptionDialog(null,
                                                   commentArray,
                                                   "Escolha uma opção",
