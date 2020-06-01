@@ -14,7 +14,16 @@ public class Labirinto_v2{
     int ataque = 0; //ataque do nosso personagem
     String nome = Entrada.leiaString("Informe o seu nome"); //nome do nosso personagem
     
-    int classe = Entrada.leiaOpcao("Escolha uma classe", "Guerreiro", "Mago", "Cartman");
+    int classe = 0;
+    for(int i = 0; i < 5; i++){
+       classe = Entrada.leiaOpcao("Escolha uma classe", "Classe 1", "Classe 2", "Classe 3", "Classe 4");
+       System.out.println("Classe: " + classe);
+    }
+    
+    for(int i = 0; i < 5; i++){
+      int d1 = jogarDado(10);
+    }
+    
     if(classe == 1){
       vida = 80;
       ataque = 10;
@@ -71,6 +80,14 @@ public class Labirinto_v2{
     }
     
     System.out.println("PARABÉNS!!! VOCÊ FINALIZOU O LABIRINTO COM OS "+ (10 + dificuldade) +" PASSOS");
+    
+  }
+  
+  private static int jogarDado(int tamanho){
+    
+    int dado = (int) (Math.random() * tamanho) + 1;
+    System.out.println("Jogou o dado: " + dado);
+    return dado;
     
   }
   
