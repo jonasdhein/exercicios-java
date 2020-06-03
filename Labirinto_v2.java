@@ -13,7 +13,7 @@ public class Labirinto_v2{
     int vida = 100;
     int ataque = 20;
     int classe = 1;
-    int cont_inimigo = 0;
+    int cont_inimigo = 0; //contador para saber em qual adversário estamos
     
     String nome = EntradaScanner.leiaString("Informe o seu nome"); //nome do nosso personagem
     String[] inimigos = {"Inimigo 1", "Inimigo 2", "Inimigo 3"};
