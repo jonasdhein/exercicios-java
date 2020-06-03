@@ -1,8 +1,8 @@
 /*
  *Nesta atividade vocÍ dever· criar uma espÈcie de jogo em formato de labirinto, ou seja, 
- * com base em perguntas e respostas, o usu√°rio ser√° levado a um caminho onde encontrar√° 
- * monstros que o atacar√£o caso ele decida ir para o caminho errado. 
- * O jogo se baseia em probabilidade apenas. Finalizar o labirinto √© o desafio aqui.
+ * com base em perguntas e respostas, o usu·rio ser· levado a um caminho onde encontrar· 
+ * monstros que o atacar„o caso ele decida ir para o caminho errado. 
+ * O jogo se baseia em probabilidade apenas. Finalizar o labirinto È o desafio aqui.
  * 
  * author: Jonas A. Dhein
  */
@@ -17,7 +17,6 @@ public class Labirinto_v2{
     
     String nome = EntradaScanner.leiaString("Informe o seu nome"); //nome do nosso personagem
     String[] inimigos = {"Inimigo 1", "Inimigo 2", "Inimigo 3"};
-    int[][] dados_inimigos = new int[][];
     
     
     for(int i = 0; i < 5; i++){
@@ -41,15 +40,6 @@ public class Labirinto_v2{
       System.out.println("Vetor na posiÁ„o " + i + " = " + vetor[i]); 
     }
     
-    boolean voltou_vivo = enfrentarInimigo(inimigos[cont_inimigo], dados_inimigos[cont_inimigo][1]); //cont_inimigo = 0
-    if(voltou_vivo){
-      cont_inimigo += 1;
-    }
-    
-    boolean voltou_vivo = enfrentarInimigo(inimigos[cont_inimigo]); //cont_inimigo = 1
-    if(voltou_vivo){
-      cont_inimigo += 1;
-    }
     
     vida = vetor[0];
     ataque = vetor[1];
@@ -73,13 +63,13 @@ public class Labirinto_v2{
       ataque = 2;
     }
     
-    int dado = 0; //exemplo de utiliza√ß√£o de um dado 20 lados (0 a 19)
+    int dado = 0; //exemplo de utilizacao de um dado 20 lados (0 a 19)
     int dificuldade = -1;
     
-    Entrada.mostraTexto("JOGO DO LABIRINTO", "Seja bem-vindo ao labirinto do caos. Escolha o lado errado e voc√™ se ****");
+    Entrada.mostraTexto("JOGO DO LABIRINTO", "Seja bem-vindo ao labirinto do caos. Escolha o lado errado e vocÍ se ****");
     
     while(dificuldade != 0 && dificuldade != 1 && dificuldade != 2){
-      dificuldade = Entrada.leiaInt("Escolha uma dificuldade:\n 0-F√°cil\n 1-M√©dio\n 2-Dif√≠cil");
+      dificuldade = Entrada.leiaInt("Escolha uma dificuldade:\n 0-Facil\n 1-Medio\n 2-DifÌcil");
     }
     
     int direcao = 0;
@@ -87,7 +77,7 @@ public class Labirinto_v2{
     for(int i = 0; i < (10 + dificuldade); i++){
       System.out.println("PASSO " + (i+1));
       while(direcao != 1 && direcao != 2 && direcao != 3){
-        direcao = Entrada.leiaInt("Informe uma dire√ß√£o:\n 1-Frente\n 2-Direita\n 3-Esquerda");
+        direcao = Entrada.leiaInt("Informe uma direÁ„o:\n 1-Frente\n 2-Direita\n 3-Esquerda");
       }
       
       dado = (int) (Math.random() * (3 + dificuldade)) + 1; //jogar o dado
@@ -98,7 +88,7 @@ public class Labirinto_v2{
         if(vida < 0){
           vida = 0;
         }
-        System.out.println("Voc√™ pisou em um matriz[i][x], que azar. (" + vida + ")");
+        System.out.println("VocÍ pisou em um matriz[i][x], que azar. (" + vida + ")");
       }else{
         //achou um frasco de vida
         vida = vida + (int) (Math.random() * 5);
@@ -110,14 +100,14 @@ public class Labirinto_v2{
       imprimePersonagem(nome, vida, classe, ataque);
       
       if(vida == 0){
-        System.out.println("GAME OVER. VOC√ä CONSEGUIU ANDAR " + (i+1) + " PASSOS!!!");
+        System.out.println("GAME OVER. VOC  CONSEGUIU ANDAR " + (i+1) + " PASSOS!!!");
         return;
       }
     
       direcao = 0;
     }
     
-    System.out.println("PARAB√âNS!!! VOC√ä FINALIZOU O LABIRINTO COM OS "+ (10 + dificuldade) +" PASSOS");
+    System.out.println("PARAB…NS!!! VOC√ä FINALIZOU O LABIRINTO COM OS "+ (10 + dificuldade) +" PASSOS");
     
   }
   
@@ -151,7 +141,7 @@ public class Labirinto_v2{
   }
   
   private static void enfrentarInimigo(){
-    System.out.println("Come√ßou o confronto");
+    System.out.println("ComeÁou o confronto");
     if(jogarDado(10) < 4){
       //vida-= 20;
     }else{
