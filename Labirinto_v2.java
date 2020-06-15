@@ -1,5 +1,5 @@
 /*
- *Nesta atividade vocÍ dever· criar uma espÈcie de jogo em formato de labirinto, ou seja, 
+ *Nesta atividade voce devera criar uma especie de jogo em formato de labirinto, ou seja, 
  * com base em perguntas e respostas, o usu√°rio ser√° levado a um caminho onde encontrar√° 
  * monstros que o atacar√£o caso ele decida ir para o caminho errado. 
  * O jogo se baseia em probabilidade apenas. Finalizar o labirinto √© o desafio aqui.
@@ -13,15 +13,16 @@ public class Labirinto_v2{
     int vida = 100;
     int ataque = 20;
     int classe = 1;
+    boolean sexo;
     int cont_inimigo = 0; //contador para saber em qual advers√°rio estamos
     
     String nome = EntradaScanner.leiaString("Informe o seu nome"); //nome do nosso personagem
     String[] inimigos = {"Inimigo 1", "Inimigo 2", "Inimigo 3"};
-    int[][] dados_inimigos = new int[][];
+    int[][] dados_inimigos = new int[2][5];
     
     
     for(int i = 0; i < 5; i++){
-      boolean sexo = Entrada.leiaBoolean("Escolha o sexo", "Masc", "Feminino"); 
+      sexo = Entrada.leiaBoolean("Escolha o sexo", "Masc", "Feminino");
       System.out.println(sexo); 
     }
     
@@ -32,13 +33,13 @@ public class Labirinto_v2{
     
     int[] vetor = {1,2,3};
     for(int i = 0; i < vetor.length; i++){
-      System.out.println("Vetor na posiÁ„o " + i + " = " + vetor[i]); 
+      System.out.println("Vetor na posicao " + i + " = " + vetor[i]); 
     }
     
     System.out.println("Alterando o vetor...");
     vetor = mudarVetor();
     for(int i = 0; i < vetor.length; i++){
-      System.out.println("Vetor na posiÁ„o " + i + " = " + vetor[i]); 
+      System.out.println("Vetor na posicao " + i + " = " + vetor[i]); 
     }
     
     boolean voltou_vivo = enfrentarInimigo(inimigos[cont_inimigo], dados_inimigos[cont_inimigo][1]); //cont_inimigo = 0
@@ -97,6 +98,7 @@ public class Labirinto_v2{
         vida = vida - dado;
         if(vida < 0){
           vida = 0;
+          break; //cai fora do FOR
         }
         System.out.println("Voc√™ pisou em um matriz[i][x], que azar. (" + vida + ")");
       }else{

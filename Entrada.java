@@ -21,7 +21,7 @@ public class Entrada {
     static final String CHAR_TITLE = "Entre com um char";
     static final String INT_TITLE = "Entre com um int";
     static final String BOOLEAN_TITLE = "Selecione verdadeiro ou falso";
-    static final String OPTION_TITLE = "Selecione uma Opção";
+    static final String OPTION_TITLE = "Selecione uma OpÃ§Ã£o";
     static final String DOUBLE_TITLE = "Entre com um double";
     static final String TRUE = "true";
     static final String FALSE = "false";
@@ -90,8 +90,8 @@ public class Entrada {
                 if (result != null) // EA: added for completnes
                     validResponse = true;
                 else {
-                    commentArray[1] = "Entrada Inválida: ";
-                    commentArray[2] = "Entre com uma string válida";
+                    commentArray[1] = "Entrada InvÃ¡lida: ";
+                    commentArray[2] = "Entre com uma string vÃ¡lida";
                 }
             } else {
                 commentArray[1] = "Precisa entrar com uma string";
@@ -171,11 +171,11 @@ public class Entrada {
                         response = result.charAt(0);
                         validResponse = true;
                     } else {
-                        commentArray[1] = "Entrada Inválida: " + result;
+                        commentArray[1] = "Entrada InvÃ¡lida: " + result;
                         commentArray[2] = "Entre com apenas um caracter";
                     }
                 } else {
-                    commentArray[1] = "Entrada Inválida"; // EA: corrected, no point to print null-object. Question: when it is possible to have null objects?
+                    commentArray[1] = "Entrada InvÃ¡lida"; // EA: corrected, no point to print null-object. Question: when it is possible to have null objects?
                     commentArray[2] = "Entre com apenas um caracter";
                 }
             } else {
@@ -219,7 +219,7 @@ public class Entrada {
             Object[] options = {trueText, falseText};
             result = JOptionPane.showOptionDialog(null,
                                                   commentArray,
-                                                  "Escolha uma Opção",
+                                                  "Escolha uma OpÃ§Ã£o",
                                                   JOptionPane.YES_NO_OPTION,
                                                   JOptionPane.QUESTION_MESSAGE,
                                                   null, //don't use a custom Icon
@@ -231,7 +231,7 @@ public class Entrada {
             {
                 validResponse = true;
             } else {
-                commentArray[1] = "Seleção incorreta: escolha os botões true ou false";
+                commentArray[1] = "SeleÃ§Ã£o incorreta: escolha os botÃµes true ou false";
             }
         }
         return (result == 0);
@@ -251,7 +251,7 @@ public class Entrada {
                                                   JOptionPane.QUESTION_MESSAGE,
                                                   null, //don't use a custom Icon
                                                   options, //the titles of buttons
-                                                  "Opção"); //the title of the default button, EA: CORRECTED from TRUE
+                                                  "OpÃ§Ã£o"); //the title of the default button, EA: CORRECTED from TRUE
 
             validResponse = true;
             if(result == 0){
@@ -279,7 +279,7 @@ public class Entrada {
                                                   JOptionPane.QUESTION_MESSAGE,
                                                   null, //don't use a custom Icon
                                                   options, //the titles of buttons
-                                                  "Opção"); //the title of the default button, EA: CORRECTED from TRUE
+                                                  "OpÃ§Ã£o"); //the title of the default button, EA: CORRECTED from TRUE
 
             validResponse = true;
             validResponse = true;
@@ -305,7 +305,7 @@ public class Entrada {
               validResponse = true;
                 response = 1;
             } else {
-                commentArray[1] = "Seleção incorreta: escolha uma Opção da tela";
+                commentArray[1] = "Selecao incorreta: escolha uma Opcao da tela";
             }*/
         }
         return -1;
@@ -375,8 +375,8 @@ public class Entrada {
             } else {
                 String result = (String) input;
                 if (result == null) { // EA: added for completnes, but is this situation possible?
-                    commentArray[1] = "Valor inteiro inválido:";
-                    commentArray[2] = "Entre com um valor inteiro válido";
+                    commentArray[1] = "Valor inteiro invÃ¡lido:";
+                    commentArray[2] = "Entre com um valor inteiro vÃ¡lido";
                 } else {
                     try {
                         //workaround for BlueJ bug - misses first exception after compilation
@@ -384,8 +384,8 @@ public class Entrada {
                         response = Integer.parseInt(result);
                         validResponse = true;
                     } catch (NumberFormatException exception) {
-                        commentArray[1] = "Valor inteiro inválido: " + result;
-                        commentArray[2] = "Entre com um valor inteiro válido";
+                        commentArray[1] = "Valor inteiro invÃ¡lido: " + result;
+                        commentArray[2] = "Entre com um valor inteiro vÃ¡lido";
                         initialValue = result; // EA: added
                     }
                 }
@@ -452,13 +452,13 @@ public class Entrada {
 
             Object input = optionPane.getInputValue();
             if (input == JOptionPane.UNINITIALIZED_VALUE) {
-                commentArray[1] = "Precisa entrar com um valor fracionário"; // EA: explanatory text added
+                commentArray[1] = "Precisa entrar com um valor fracionÃ¡rio"; // EA: explanatory text added
                 commentArray[2] = EMPTY_STRING;
             } else {
                 String result = (String) input;
                 if (result == null) { // EA: added for completnes, but is this situation possible?
-                    commentArray[1] = "valor fracionário inválido:";
-                    commentArray[2] = "Entre com um valor fracionário válido";
+                    commentArray[1] = "valor fracionÃ¡rio invÃ¡lido:";
+                    commentArray[2] = "Entre com um valor fracionÃ¡rio vÃ¡lido";
                 } else {
                     // convert String to double
                     try {
@@ -468,8 +468,8 @@ public class Entrada {
                         validResponse = true;
                     } catch (NumberFormatException exception) {
                         // EA: case with uninitialized value is moved up
-                        commentArray[1] = "Valor fracionário inválido: " + result;
-                        commentArray[2] = "Entre com um valor fracionário válido";
+                        commentArray[1] = "Valor fracionÃ¡rio invÃ¡lido: " + result;
+                        commentArray[2] = "Entre com um valor fracionÃ¡rio vÃ¡lido";
                         initialValue = result;    // EA: corrected
                     }
                 }
