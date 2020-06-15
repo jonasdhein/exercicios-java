@@ -1,6 +1,6 @@
 /*
- *Nesta atividade voce devera criar uma especie de jogo em formato de labirinto, ou seja, 
- * com base em perguntas e respostas, o usuário será levado a um caminho onde encontrará 
+ *Nesta atividade você deverá criar uma espécie de jogo em formato de labirinto, ou seja, 
+ * com base em perguntas e respostas, o usuário será levado a um caminho onde encontrará
  * monstros que o atacarão caso ele decida ir para o caminho errado. 
  * O jogo se baseia em probabilidade apenas. Finalizar o labirinto é o desafio aqui.
  * 
@@ -18,7 +18,6 @@ public class Labirinto_v2{
     
     String nome = EntradaScanner.leiaString("Informe o seu nome"); //nome do nosso personagem
     String[] inimigos = {"Inimigo 1", "Inimigo 2", "Inimigo 3"};
-    int[][] dados_inimigos = new int[2][5];
     
     
     for(int i = 0; i < 5; i++){
@@ -42,15 +41,6 @@ public class Labirinto_v2{
       System.out.println("Vetor na posicao " + i + " = " + vetor[i]); 
     }
     
-    boolean voltou_vivo = enfrentarInimigo(inimigos[cont_inimigo], dados_inimigos[cont_inimigo][1]); //cont_inimigo = 0
-    if(voltou_vivo){
-      cont_inimigo += 1;
-    }
-    
-    boolean voltou_vivo = enfrentarInimigo(inimigos[cont_inimigo]); //cont_inimigo = 1
-    if(voltou_vivo){
-      cont_inimigo += 1;
-    }
     
     vida = vetor[0];
     ataque = vetor[1];
@@ -74,13 +64,13 @@ public class Labirinto_v2{
       ataque = 2;
     }
     
-    int dado = 0; //exemplo de utilização de um dado 20 lados (0 a 19)
+    int dado = 0; //exemplo de utilizacao de um dado 20 lados (0 a 19)
     int dificuldade = -1;
     
     Entrada.mostraTexto("JOGO DO LABIRINTO", "Seja bem-vindo ao labirinto do caos. Escolha o lado errado e você se ****");
     
     while(dificuldade != 0 && dificuldade != 1 && dificuldade != 2){
-      dificuldade = Entrada.leiaInt("Escolha uma dificuldade:\n 0-Fácil\n 1-Médio\n 2-Difícil");
+      dificuldade = Entrada.leiaInt("Escolha uma dificuldade:\n 0-Facil\n 1-Medio\n 2-Difícil");
     }
     
     int direcao = 0;
