@@ -26,7 +26,6 @@ public class OrdenarVetorRandomico{
     System.out.println(nao_ordenado);
     
     //Entrada.mostraTexto("Continuar", "Clique OK para ordenar o vetor");
->>>>>>> 8605f01b4730ce320bf44d019754dede80f8b1c2
     int temp = 0;
     for(int i = 0; i < tam - 1; i++){
       for(int x = 0; x < tam - i - 1; x++){
