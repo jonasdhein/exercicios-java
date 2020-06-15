@@ -1,5 +1,5 @@
 /**
- FUP que calcule a ·rea de um ret‚ngulo
+ FUP que calcule a √Årea de um ret√¢ngulo
  */
 public class AreaRetangulo {
   
@@ -9,7 +9,7 @@ public class AreaRetangulo {
     int altura = 30; //30cm
     
     double area = base * altura;
-    System.out.println("¡rea do ret‚ngulo (cm): " + area);
+    System.out.println("√Årea do ret√¢ngulo (cm): " + area);
   }
   
 }

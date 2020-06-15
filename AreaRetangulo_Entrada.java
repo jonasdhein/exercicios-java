@@ -1,15 +1,15 @@
 /**
- FUP que calcule a área de um retângulo
+ FUP que calcule a Ãrea de um retÃ¢ngulo
  */
 public class AreaRetangulo_Entrada {
   
   public static void main(String[] args) { 
     
-    int base = Entrada.leiaInt("Informe a base do retângulo:");
-    int altura = Entrada.leiaInt("Informe a altura do retângulo:");
+    int base = Entrada.leiaInt("Informe a base do retÃ¢ngulo:");
+    int altura = Entrada.leiaInt("Informe a altura do retÃ¢ngulo:");
     
     double area = base * altura;
-    System.out.println("Área do retângulo (cm): " + area);
+    System.out.println("Ãrea do retÃ¢ngulo (cm): " + area);
   }
   
 }

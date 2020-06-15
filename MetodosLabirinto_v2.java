@@ -16,7 +16,6 @@ public class MetodosLabirinto_v2{
     int[] inimigos_enfrentados = new int[5];
     
     for(int i = 0; i < 5; i++){
-      
       do{
         existe = false;
         inimigo = jogarDado(5);
@@ -32,7 +31,7 @@ public class MetodosLabirinto_v2{
       System.out.println("O inimigo sorteado é o: " + vetor_inimigos[inimigo-1]);
       
       int valor_confronto = confronto(inimigo);
-      vida = vida - valor_confronto;
+      vida = vida - valor_confronto;//atualizar a vida depois do confronto
       if(vida <= 0){
         System.out.println("GAME OVER, VOCÊ MORREU PARA O " + vetor_inimigos[inimigo-1]);
         return;

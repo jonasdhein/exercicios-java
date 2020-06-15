@@ -2,7 +2,7 @@ public class ExemplosLabirinto{
   
   public static void main(String[] args){
  
-    boolean atacar;
+    boolean atacar = false;
     
     if(1 == 2){
       atacar = Entrada.leiaBoolean("Irá atacar?","Sim!!","Não");
