@@ -6,30 +6,30 @@ public class AnimalEscolhido{
   
   public static void main(String[] args){
     
-    boolean quadrupede = Entrada.leiaBoolean("O animal é quadrúpede?");
+    boolean quadrupede = Entrada.leiaBoolean("O animal Ã© quadrÃºpede?");
     
     if(quadrupede){
-        boolean carnivoro = Entrada.leiaBoolean("O animal é carnívoro?");
+        boolean carnivoro = Entrada.leiaBoolean("O animal Ã© carnÃ­voro?");
         if(carnivoro){
-          System.out.println("O animal escolhido é o LEÃO");
+          System.out.println("O animal escolhido Ã© o LEÃƒO");
         }else{
-          System.out.println("O animal escolhido é o CAVALO");
+          System.out.println("O animal escolhido Ã© o CAVALO");
         }
     }else{
-      boolean bipede = Entrada.leiaBoolean("O animal é bípede?");
+      boolean bipede = Entrada.leiaBoolean("O animal Ã© bÃ­pede?");
       if(bipede == true){
-        boolean onivoro = Entrada.leiaBoolean("O animal é onívoro?");
+        boolean onivoro = Entrada.leiaBoolean("O animal Ã© onÃ­voro?");
         if(onivoro == true){
-          System.out.println("O animal escolhido é o HOMEM");
+          System.out.println("O animal escolhido Ã© o HOMEM");
         }else{
-          System.out.println("O animal escolhido é o MACACO");
+          System.out.println("O animal escolhido Ã© o MACACO");
         }
       }else{
-        boolean voador = Entrada.leiaBoolean("O animal é voador?");
+        boolean voador = Entrada.leiaBoolean("O animal Ã© voador?");
         if(voador == true){
-          System.out.println("O animal é o MORCEGO");
+          System.out.println("O animal Ã© o MORCEGO");
         }else{
-          System.out.println("O animal é a BALEIA");
+          System.out.println("O animal Ã© a BALEIA");
         }
       }
     }
