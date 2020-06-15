@@ -1,7 +1,4 @@
 /*
-<<<<<<< HEAD
-
-=======
  * FUP utilizando a atividade anterior. Porém agora o vetor inicial precisa ser dinâmico 
  * no tamanho e com valores preenchidos aleatoriamente.
 >>>>>>> 8605f01b4730ce320bf44d019754dede80f8b1c2
@@ -10,15 +7,6 @@ public class OrdenarVetorRandomico{
 
   public static void main(String[] args){
    
-<<<<<<< HEAD
-    int tamanho = (int) (Math.random() * 60) + 1;
-    int[] numeros = new int[35];
-    for(){
-      numeros[i] = (int) (Math.random() * 60) + 1
-    }
-    
-    /*System.out.println(Funcoes.obterHoraAtual());
-=======
     //definindo o tamanho do vetor dinamicamente
     int tam = (int) (Math.random() * 100) + 1;
     System.out.println("Tamanho do vetor: " + tam);
@@ -48,16 +36,7 @@ public class OrdenarVetorRandomico{
           numeros[(x+1)] = temp;
         }
       }
-<<<<<<< HEAD
-    }*/
-    
-    for(int i = 0; i < numeros.length; i++){
-      System.out.println(numeros[i]);
-    }
-    System.out.println(Funcoes.obterHoraAtual());
-    
-    System.out.println("Fim do programa");
-=======
+
     }
     
     String ordenado = "";
@@ -69,7 +48,6 @@ public class OrdenarVetorRandomico{
     System.out.println(ordenado);
     
     System.out.println("\nFim do programa");
->>>>>>> 8605f01b4730ce320bf44d019754dede80f8b1c2
     
   }
 
