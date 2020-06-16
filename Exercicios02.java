@@ -1,6 +1,6 @@
 /*
- 2) FUP que calcula a idade de uma pessoa, solicitando mês e ano do seu nascimento, 
- também utilizando a classe Entrada.
+ 2) FUP que calcula a idade de uma pessoa, solicitando mÃªs e ano do seu nascimento, 
+ tambÃ©m utilizando a classe Entrada.
 */
 public class Exercicios02{
   
@@ -10,16 +10,16 @@ public class Exercicios02{
     int mesAtual = 4;
     
     int anoNascimento = Entrada.leiaInt("Informe o seu ano de nascimento");
-    int mesNascimento = Entrada.leiaInt("Informe o seu mês de nascimento");
+    int mesNascimento = Entrada.leiaInt("Informe o seu mÃªs de nascimento");
     
     int idadePessoa = anoAtual - anoNascimento;
     
-    //se o mês de aniversário ainda não chegou
+    //se o mÃªs de aniversÃ¡rio ainda nÃ£o chegou
     if(mesNascimento > mesAtual){
      idadePessoa -= 1;
     }
     
-    System.out.println("Sua idade é: " + idadePessoa);
+    System.out.println("Sua idade Ã©: " + idadePessoa);
   
   } 
   

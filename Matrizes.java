@@ -5,7 +5,6 @@ public class Matrizes{
   
   public static void main(String[] args){
   
-    int[] vetor = new int[10];
     int[][] matriz = new int[2][5];
     System.out.println("Tamanho da matriz é: " + (matriz.length * matriz[0].length));
 

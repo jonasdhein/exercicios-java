@@ -1,9 +1,13 @@
 /*
-Considere um parque de estacionamento que pratica os preços seguintes: 
+Considere um parque de estacionamento que pratica os preÃ§os seguintes: 
 primeira hora: R$ 2,00; 
 segunda hora: R$ 1,50;
 a partir da segunda hora: R$ 1,00 por hora. 
-O tempo de permanência no parque é contabilizado em horas e minutos. Por exemplo, se um veículo permanecer 2 horas e 30 minutos no parque, pagará R$ 2 (primeira hora) + R$ 1,50 (segunda hora) + R$ 0,50 (30 minutos a R$ 1/hora) = R$ 4. Elabore um algoritmo que, lido o tempo que determinado veículo permaneceu estacionado no parque (horas e minutos), diga a quantia que deve ser pagar
+O tempo de permanÃªncia no parque Ã© contabilizado em horas e minutos. Por exemplo, 
+se um veÃ­culo permanecer 2 horas e 30 minutos no parque, 
+pagarÃ¡ R$ 2 (primeira hora) + R$ 1,50 (segunda hora) + R$ 0,50 (30 minutos a R$ 1/hora) = R$ 4. 
+Elabore um algoritmo que, lido o tempo que determinado veÃ©culo permaneceu estacionado no parque 
+(horas e minutos), diga a quantia que deve ser pagar
 */
 public class EstacionamentoEmMinutos{
 

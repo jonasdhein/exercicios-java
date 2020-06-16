@@ -17,7 +17,7 @@ public class Exercicios01{
       toLowerCase = lAJeaDo > lajeado
       toUpperCase = lajeado > LAJEADO
       equals = comparar Strings
-      equalsIgnoreCase = comparar as Strings ignorando a formatação do texto quanto a CAIXA ALTA e caixa baixa
+      equalsIgnoreCase = comparar as Strings ignorando a formataÃ§Ã£o do texto quanto a CAIXA ALTA e caixa baixa
     */
     if(idade1 >= 60 && cidade1.trim().toLowerCase().equals("lajeado")){
       totalIdade += idade1;
@@ -34,7 +34,7 @@ public class Exercicios01{
     }
     
     System.out.println("Soma das idades maiores que 60: " + totalIdade);
-    System.out.println("Relação de nomes: " + nomes);
+    System.out.println("RelaÃ§Ã£o de nomes: " + nomes);
     
   }
 }

@@ -1,7 +1,6 @@
 /*
  * FUP utilizando a atividade anterior. Porém agora o vetor inicial precisa ser dinâmico 
  * no tamanho e com valores preenchidos aleatoriamente.
->>>>>>> 8605f01b4730ce320bf44d019754dede80f8b1c2
  */
 public class OrdenarVetorRandomico{
 

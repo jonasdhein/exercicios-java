@@ -1,6 +1,6 @@
 /* 1 - sortear os inimigos
- * 2 - n„o pegar inimigo repetido
- * 3 - atualizar vari·vel de vida apÛs confronto
+ * 2 - n√£o pegar inimigo repetido
+ * 3 - atualizar vari√°vel de vida ap√≥s confronto
 */
 public class MetodosLabirinto_v2{
   
@@ -28,29 +28,29 @@ public class MetodosLabirinto_v2{
       
       inimigos_enfrentados[i] = inimigo;
       
-      System.out.println("O inimigo sorteado È o: " + vetor_inimigos[inimigo-1]);
+      System.out.println("O inimigo sorteado √© o: " + vetor_inimigos[inimigo-1]);
       
       int valor_confronto = confronto(inimigo);
       vida = vida - valor_confronto;//atualizar a vida depois do confronto
       if(vida <= 0){
-        System.out.println("GAME OVER, VOC  MORREU PARA O " + vetor_inimigos[inimigo-1]);
+        System.out.println("GAME OVER, VOC√ä MORREU PARA O " + vetor_inimigos[inimigo-1]);
         return;
       }
     }
     
-    System.out.println("Se imprimiu isso, È pq vocÍ ganhou, parabÈns!");
+    System.out.println("Se imprimiu isso, √© pq voc√™ ganhou, parab√©ns!");
     
-  }//fechamento do mÈtodo main
+  }//fechamento do m√©todo main
   
   private static int jogarDado(int tamanho){
     int dado = (int) (Math.random() * tamanho) + 1;
     System.out.println("Jogou o dado: " + dado);
     return dado;
-  }//fechando do mÈtodo jogarDado
+  }//fechando do m√©todo jogarDado
   
   private static int confronto(int inimigo){
     int valor = jogarDado(300);
     return valor;
-  }//fechamento do mÈtodo confronto
+  }//fechamento do m√©todo confronto
   
 }
