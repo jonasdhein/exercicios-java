@@ -26,6 +26,8 @@ public class Mercado_v2 {
         int produto = 0;
         double quant = 0;
 
+        int pipe, ecom;
+
         while(true){
 
             do{
@@ -36,12 +38,13 @@ public class Mercado_v2 {
                 carrinho = new String[quant_produtos][3]; //carrinho com tamanho necessário OK
                 String[] vetor_compras = compras.split("\n");
                 for(int x = 0; x < vetor_compras.length; x++){
+                    
                     // vamos utilizar o método indexOf da Classe String para dividir o texto e capturar separadamente os itens
-                    int pipe = vetor_compras[x].indexOf("|");
-                    int ecom = vetor_compras[x].indexOf("&");
+                    pipe = vetor_compras[x].indexOf("|");
+                    ecom = vetor_compras[x].indexOf("&");
                     carrinho[x][0] = vetor_compras[x].substring(0, pipe);
-                    carrinho[x][1] = quantidade
-                    carrinho[x][2] = valor_total
+                    carrinho[x][1] = vetor_compras[x].substring(pipe + 1, ecom);
+                    carrinho[x][2] = vetor_compras[x].substring(ecom + 1);
                 }
                 return;//para a execução do programa
             }
@@ -50,7 +53,7 @@ public class Mercado_v2 {
                 quant = Entrada.leiaDouble("Informe a quantidade de " + mercado[produto-1][0]);
             }while(quant <= 0);//fica perguntando enquanto a quantidade digitada for 0 ou menor
 
-            compras += mercado[produto-1][0] + "|" + "quantidade" + "&" + "valor_total" + "\n";
+            compras += mercado[produto-1][0] + "|" + quant + "&" + (quant * Double.parseDouble(mercado[produto-1][1])) + "\n";
 
             soma += quant * Double.parseDouble(mercado[produto-1][1]);
 

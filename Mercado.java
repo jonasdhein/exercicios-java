@@ -4,9 +4,6 @@ seu respectivo valor. Exemplo: Maça - R$ 2,90.
 Com base nessa tabela, você deverá simular uma compra em um supermercado pelo usuário. 
 Apresente a lista para ele e através do método entrada ele deverá escolher, 1 a 1, os itens que quer colocar 
 no carrinho. Ao final, você deverá mostrar quanto irá custar o carrinho e quais os itens que ele possui.
-
-[DESAFIO] Segunda parte: Ao final, ao invés de armazenar os produtos em uma String, você deve armazená-los em uma nova
-matriz, contendo na coluna 0 o nome do produto, na coluna 1 a quantidade escolhida e na coluna 2 o valor total.
 */
 public class Mercado {
     
