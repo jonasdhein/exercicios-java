@@ -19,7 +19,7 @@ public class Mercado_v2 {
         String[][] carrinho;
         String[][] mercado = {
             {"Abacaxi", "5.45"}, {"Batata", "5.50"}, {"Carne", "20.10"}, {"Cerveja", "8.80"}, 
-            {"Erva", "9.40"}, {"Laranja", "3.33"}, {"Maça", "3.90"}, {"Mamão", "5.90"}, 
+            {"Erva", "9.40"}, {"Laranja", "3.33"}, {"Maçã", "3.90"}, {"Mamão", "5.90"}, 
             {"Ovo", "5.10"}, {"Peixe", "15.00"}
         };
 
@@ -34,8 +34,14 @@ public class Mercado_v2 {
 
             if(produto == 0){//0 = SAIR da tela de compra e mostrar a matriz do carrinho
                 carrinho = new String[quant_produtos][3]; //carrinho com tamanho necessário OK
-                for(int x = 0; x < carrinho.length; x++){
-                    //indexOf na String compras <<<<
+                String[] vetor_compras = compras.split("\n");
+                for(int x = 0; x < vetor_compras.length; x++){
+                    // vamos utilizar o método indexOf da Classe String para dividir o texto e capturar separadamente os itens
+                    int pipe = vetor_compras[x].indexOf("|");
+                    int ecom = vetor_compras[x].indexOf("&");
+                    carrinho[x][0] = vetor_compras[x].substring(0, pipe);
+                    carrinho[x][1] = quantidade
+                    carrinho[x][2] = valor_total
                 }
                 return;//para a execução do programa
             }
@@ -44,9 +50,8 @@ public class Mercado_v2 {
                 quant = Entrada.leiaDouble("Informe a quantidade de " + mercado[produto-1][0]);
             }while(quant <= 0);//fica perguntando enquanto a quantidade digitada for 0 ou menor
 
-            >>compras += "Abacaxi | 2 & 10.90 ENTER"; //utilizar caracteres especiais para delimitar as infos
-            // vamos tentar utilizar o método indexOf da Classe String para dividir o texto
-            >>compras += mercado[produto-1][0] + "|" + ... + "\n";
+            compras += mercado[produto-1][0] + "|" + "quantidade" + "&" + "valor_total" + "\n";
+
             soma += quant * Double.parseDouble(mercado[produto-1][1]);
 
             quant_produtos += 1;

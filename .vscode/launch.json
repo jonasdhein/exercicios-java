@@ -4,7 +4,13 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-    
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Mercado_v2",
+            "request": "launch",
+            "mainClass": "Mercado_v2",
+            "projectName": "exercicios-java_e3f8350b"
+        },
         {
             "type": "java",
             "name": "Debug (Launch) - Current File",
