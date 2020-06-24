@@ -1,20 +1,20 @@
-public class TratamentoDeErros{
-  
-  public static void main(String[] args){
+public class TratamentoDeErros {
+
+    public static void main(String[] args){
+
+        float c;
+
+        try{
+            
+            int a = EntradaScanner.leiaInt("Informe um número");
+            int b = EntradaScanner.leiaInt("Informe um número");
+
+        }catch(Exception ex){
+            System.out.println("OPS, erro na operação");
+        }finally{
+            System.out.println("Chegou no fim do código");
+        }
+
+    }
     
-    int vida = 0;
-    double numero = 0;
-    try{//código a ser executado
-      numero = 5 /  vida;
-      
-    }catch(Exception ex){//captura do erro
-      //System.out.println(ex);
-      numero = 0;
-    } 
-    
-    System.out.println("Valor do número = " + numero);
-    
-  }
-  
-  
 }

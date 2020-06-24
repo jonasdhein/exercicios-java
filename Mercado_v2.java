@@ -13,8 +13,13 @@ public class Mercado_v2 {
     public static void main(String[] args){
         
         int quant_produtos = 0;
-        double soma = 0;
-        String compras = new String("");
+        int produto = 0;
+        double quant = 0;
+        int pipe, ecom;
+        String compras = "";
+        String nm_prod;
+        String qn_prod;
+        String vl_prod;
 
         String[][] carrinho;
         String[][] mercado = {
@@ -23,11 +28,7 @@ public class Mercado_v2 {
             {"Ovo", "5.10"}, {"Peixe", "15.00"}
         };
 
-        int produto = 0;
-        double quant = 0;
-
-        int pipe, ecom;
-
+        
         while(true){
 
             do{
@@ -42,10 +43,17 @@ public class Mercado_v2 {
                     // vamos utilizar o método indexOf da Classe String para dividir o texto e capturar separadamente os itens
                     pipe = vetor_compras[x].indexOf("|");
                     ecom = vetor_compras[x].indexOf("&");
-                    carrinho[x][0] = vetor_compras[x].substring(0, pipe);
-                    carrinho[x][1] = vetor_compras[x].substring(pipe + 1, ecom);
-                    carrinho[x][2] = vetor_compras[x].substring(ecom + 1);
+
+                    nm_prod = vetor_compras[x].substring(0, pipe);
+                    qn_prod = vetor_compras[x].substring(pipe + 1, ecom);
+                    vl_prod = vetor_compras[x].substring(ecom + 1);
+
+                    carrinho[x][0] = nm_prod;
+                    carrinho[x][1] = qn_prod;
+                    carrinho[x][2] = vl_prod;
                 }
+
+                imprimeCompras(carrinho);
                 return;//para a execução do programa
             }
 
@@ -54,8 +62,6 @@ public class Mercado_v2 {
             }while(quant <= 0);//fica perguntando enquanto a quantidade digitada for 0 ou menor
 
             compras += mercado[produto-1][0] + "|" + quant + "&" + (quant * Double.parseDouble(mercado[produto-1][1])) + "\n";
-
-            soma += quant * Double.parseDouble(mercado[produto-1][1]);
 
             quant_produtos += 1;
         }
@@ -73,8 +79,14 @@ public class Mercado_v2 {
         return resultado;
     }
 
-    private static void imprimeCompras(String compras, double valor){
-        //Entrada.mostraTexto("Carrinho de Compras", "Itens comprados:\n" + compras + "\n\n" + "Total: R$" + (double) (Math.round(valor * 100) / 100));
+    private static void imprimeCompras(String[][] carrinho){
+
+        String resultado = "";
+        for(int i = 0; i < carrinho.length; i++){
+            resultado += carrinho[i][0] + " -    R$ " + carrinho[i][2] + "\n";
+        }
+
+        Entrada.mostraTexto("Carrinho de Compras", "Itens comprados:\n" + resultado);
     }
 
 }
